@@ -1,90 +1,62 @@
+import { stringify } from "node:querystring";
 import React, { Fragment } from "react";
-import { Menu } from "../../components/Menu/Menu";
-import { MenuForm } from "../../components/Menu/MenuForm/MenuForm";
+import { Navigation } from '../Nav/Navigation';
 import "./App.css";
 
-const initialMenus = [
-  {
-    section: "Phisycal",
-    optionsArray: ["Skin" , "Color", "Eyes"],
-    colorOptionsArray: ["#FFC8A5"],
-    imgUrlArray: ["No existente todavía"],
-    sectionSelected: true,
-    skinSelected: true,
-    eyesSelected: false,
-  },
-  {
-    section: "Clothes",
-    optionsArray: ["Hat", "Shirt", "Pants"],
-    colorOptionsArray: [
-      "Este arreglo se obtiene de la cantidad de colores que se obtengan del svg",
-    ],
-    imgUrlArray: ["Arreglo de Url de las 9 imagenes que se ven"],
-    hatSelected: true,
-    shirtSelected: false,
-    pantsSelected: false,
-  },
-];
+const initialNavs ={
+    item1: "Body",
+    item2: "Clothes",
+    item3: "Background",
+    item4: "Pokemon",
+}
 
 export const App = () => {
-  const [menus, setMenus] = React.useState(initialMenus);
 
-  const handleNewElement = (
-    section: string,
-    url: string,
-    selected: boolean,
-    array: string[]
+  const [navs, setNavs] = React.useState(initialNavs);
+
+  const HandleNewNav = (
+    item: string,
+
   ) => {
-    const copy = menus.slice();
-    const newObj = {
-      section: section,
-      optionsArray: array,
-      colorOptionsArray: array,
-      imgUrlArray: array,
-      sectionSelected: selected,
-      skinSelected: selected,
-      eyesSelected: selected,
+    
+    const newNav = {
+      item1: item,
+      item2: item,
+      item3: item,
+      item4: item,
     };
-    copy.push(newObj);
-    setMenus(copy);
+    
+    setNavs(newNav);
   };
 
   return (
     <Fragment>
+
+      
+
       <h2 className="mainTitle">Create your pokemon trainer</h2>
       <div className="circulo circulo--first"></div>
       <div className="circulo circulo--second"></div>
       <div className="circulo circulo--third"></div>
 
       <body>
+      
+     
+     
+      
+      <Navigation
+      //Navegación para escoger editor
+        item1={navs.item1}
+        item2={navs.item2}
+        item3={navs.item3}
+        item4={navs.item4}
+      />;
 
-        
 
-        <MenuForm onNewItem={handleNewElement} />
 
-        {menus.map(
-          ({
-            section,
-            optionsArray,
-            colorOptionsArray,
-            imgUrlArray,
-            sectionSelected,
-            skinSelected,
-            eyesSelected,
-          }) => {
-            return (
-              <Menu
-                section={section}
-                optionsArray={optionsArray}
-                colorOptionsArray={colorOptionsArray}
-                imgUrlArray={imgUrlArray}
-                sectionSelected={sectionSelected}
-                skinSelected={skinSelected}
-                eyesSelected={eyesSelected}
-              />
-            );
-          }
-        )}
+
+
+
       </body>
     </Fragment>
   );
