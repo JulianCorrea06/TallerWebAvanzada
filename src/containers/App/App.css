@@ -1,0 +1,46 @@
+html{
+  background: -webkit-gradient(linear, left top, right top, from(#FF6868), to(#FFBEA2));
+  background: linear-gradient(to right, #FF6868, #FFBEA2);
+}
+
+.mainTitle {
+  margin: 100px auto 80px auto;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+}
+
+
+.circulo {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: -2;
+}
+
+.circulo--first {
+  background: #FFD7A8;
+  width: 958px;
+  height: 958px;
+  left: 1032px;
+  top: -325px;
+}
+
+.circulo--second {
+  background: #FF7979;
+  width: 958px;
+  height: 958px;
+  left: 734px;
+  top: 412px;
+}
+
+.circulo--third {
+  background: #FFF8BB;
+  width: 958px;
+  height: 958px;
+  left: 1346px;
+  top: 340px;
+}
+
+
+
