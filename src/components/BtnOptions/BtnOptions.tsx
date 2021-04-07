@@ -11,7 +11,6 @@ export const BtnOptions: React.FC<BtnOptionsProps> = ({text, selected})=>{
 
     return(
         <button className='btn2'>{text}</button>
-
     );
 
 }

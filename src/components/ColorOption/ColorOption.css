@@ -1,0 +1,28 @@
+.colorpickrbtn{
+
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 8;
+    background-color: tomato;
+    color: white;
+    border: 3px solid #FFFFFF;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-radius: 20.7974px;
+    padding: 5px 40px 5px 40px;
+    color: tomato(197, 174, 174);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+    
+}
