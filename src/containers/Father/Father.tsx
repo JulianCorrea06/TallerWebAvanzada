@@ -1,5 +1,6 @@
 import * as React from 'react'
 import './Father.css'
+import { Selections } from "../Father/Selections/Selections";
 import { Route } from 'react-router';
 
 interface FatherProps{
@@ -15,7 +16,7 @@ export const Father: React.FC<FatherProps> =({}) =>{
         <div className='section'>
             
             <Route path="/body" render={()=>
-            <Father/>}
+            <Selections/>}
         />
 
         </div>
