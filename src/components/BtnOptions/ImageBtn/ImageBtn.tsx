@@ -1,18 +1,22 @@
 import * as React from 'react'
 import './imageBtn.css'
+import { Link } from 'react-router-dom';
 
-interface OptionsProps{
-    //Parte 1 donde salen las opciones
-    //Parte 2 donde salen los elementos de personalización de color e imagen
+interface ImageBtnProps{
+    id:string;
+    id2?:string;
+    id3?:string;
 }
 
-export const Father: React.FC<OptionsProps> =({}) =>{
+export const ImageBtn: React.FC<ImageBtnProps> =({id,id2,id3}) =>{
 
 
     return(
 
-        <div className='section'>
-            
+        <div className='imgSection'>
+            <Link to="/background/back1"><img src="../../../utils/images/back1.png" alt=""/></Link>
+            <Link to="/background/back1"><img src="../../../utils/images/back2.jpg" alt=""/></Link>
+            <Link to="/background/back1"><img src="../../../utils/images/back3.jpg" alt=""/></Link>
         </div>
     );
 }

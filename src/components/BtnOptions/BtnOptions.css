@@ -2,8 +2,8 @@
 
     font-family: sans-serif;
     font-style: normal;
-    font-weight: 700;
-    font-size: 8;
+    font-weight: 550;
+    font-size: 24px;
     background-color: tomato;
     color: white;
     border: 3px solid #FFFFFF;
@@ -24,4 +24,6 @@
     transition: -webkit-transform .3s;
     transition: transform .3s;
     transition: transform .3s, -webkit-transform .3s;
+
+    margin-bottom: 20px;
   }
