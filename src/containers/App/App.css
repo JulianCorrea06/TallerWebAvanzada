@@ -3,6 +3,8 @@ html{
   background: linear-gradient(to right, #FF6868, #FFBEA2);
 }
 
+
+
 .mainTitle {
   margin: 100px auto 80px auto;
   text-align: center;
@@ -40,6 +42,12 @@ html{
   height: 958px;
   left: 1346px;
   top: 340px;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  
 }
 
 

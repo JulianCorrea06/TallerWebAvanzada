@@ -1,10 +1,16 @@
 .navigation{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    
 }
 
 
 .btn1 {
+    
     font-family: sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -28,6 +34,7 @@
     transition: -webkit-transform .3s;
     transition: transform .3s;
     transition: transform .3s, -webkit-transform .3s;
+    text-decoration: none;
   }
   
   .btn1:disabled {
@@ -74,4 +81,9 @@
     transition: -webkit-transform .3s;
     transition: transform .3s;
     transition: transform .3s, -webkit-transform .3s;
+    text-decoration: none;
   }
+
+  a:link, a:visited, a:active {
+    text-decoration:none;
+}

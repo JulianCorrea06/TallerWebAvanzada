@@ -1,5 +1,6 @@
 import * as React from 'react'
 import './Father.css'
+import { Route } from 'react-router';
 
 interface FatherProps{
     //Parte 1 donde salen las opciones
@@ -12,8 +13,11 @@ export const Father: React.FC<FatherProps> =({}) =>{
     return(
 
         <div className='section'>
-            <label htmlFor=""> Objeto 1 - Optiones</label>
-            <label htmlFor=""> Objeto 2 - Optiones</label>
+            
+            <Route path="/body" render={()=>
+            <Father/>}
+        />
+
         </div>
     );
 }

@@ -1,7 +1,11 @@
 import { stringify } from "node:querystring";
 import React, { Fragment } from "react";
 import { Navigation } from '../Nav/Navigation';
+import {Father} from '../Father/Father';
+import { Route } from 'react-router';
+
 import "./App.css";
+import {HashRouter, MemoryRouter, BrowserRouter} from 'react-router-dom';
 
 import ColorPicker from "react-pick-color";
 
@@ -34,7 +38,7 @@ export const App = () => {
   };
 
   return (
-    <Fragment>
+    <BrowserRouter>
       <h2 className="mainTitle">Create your pokemon trainer</h2>
       <div className="circulo circulo--first"></div>
       <div className="circulo circulo--second"></div>
@@ -49,12 +53,27 @@ export const App = () => {
           item4={navs.item4}
         />
 
+        <Route path="/body" render={()=>
+            <Father/>}
+        />
+        <Route path="/clothes" render={()=>
+            <Father/>}
+        />
+        <Route path="/background" render={()=>
+            <Father/>}
+        />
+        <Route path="/pokemon" render={()=>
+            <Father/>}
+        />
 
-          <ColorPicker color={color} hideAlpha={true} onChange={(color) => setColor(color.hex) } />
 
-        ;
       </body>
-    </Fragment>
+
+      
+    </BrowserRouter>
+
+    //arribita en el body colocar
+    //<ColorPicker color={color} hideAlpha={true} onChange={(color) => setColor(color.hex) } />
   );
 };
 
