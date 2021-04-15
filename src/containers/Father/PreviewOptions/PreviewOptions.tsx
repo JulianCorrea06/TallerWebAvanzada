@@ -1,6 +1,8 @@
 import * as React from 'react'
 import './PreviewOptions.css'
 import { Route } from 'react-router';
+import { Link } from 'react-router-dom';
+import PokeBody from '../../../utils/images/cuerpo.svg';
 
 interface PreviewOptionsProps{
     //Parte 1 donde salen las opciones
@@ -10,9 +12,15 @@ interface PreviewOptionsProps{
 export const PreviewOptions: React.FC<PreviewOptionsProps> =({}) =>{
 
     return(
-
-        <div className='section'>
             
-        </div>
+            
+                <div className='previewSection'>
+                    <h1>Previsualización</h1>
+                    <img className='skinstyle' src={PokeBody} alt=""/>
+                </div>
+
+            
+            
+        
     );
 }
