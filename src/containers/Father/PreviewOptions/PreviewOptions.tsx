@@ -1,8 +1,9 @@
-import * as React from 'react'
+import React, { useContext } from "react";
 import './PreviewOptions.css'
 import { Route } from 'react-router';
 import { Link } from 'react-router-dom';
 import PokeBody from '../../../utils/images/cuerpo.svg';
+import { previewContext } from "../../../utils/previewContext";
 
 interface PreviewOptionsProps{
     //Parte 1 donde salen las opciones
@@ -10,6 +11,10 @@ interface PreviewOptionsProps{
 }
 
 export const PreviewOptions: React.FC<PreviewOptionsProps> =({}) =>{
+
+    const context=React.useContext(previewContext);
+    console.log(context);
+    
 
     return(
             
@@ -24,3 +29,4 @@ export const PreviewOptions: React.FC<PreviewOptionsProps> =({}) =>{
         
     );
 }
+

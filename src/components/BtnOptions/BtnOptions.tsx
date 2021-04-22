@@ -13,6 +13,12 @@ interface BtnOptionsProps{
 
 export const BtnOptions: React.FC<BtnOptionsProps> = ({text,text2,text3, selected})=>{
 
+
+    const setBackground =() =>{
+
+
+    }
+
     return(
         <div className="buttons">
             <Route path="/body" render={()=>
@@ -30,9 +36,9 @@ export const BtnOptions: React.FC<BtnOptionsProps> = ({text,text2,text3, selecte
 
             <Route path="/background" render={()=>
             <div className="backgroundMenu">
-            <Link to="/background/back2"><img src={"https://i.ibb.co/myvxs1Y/back2.png"}  /></Link>
-            <Link to="/background/back3"><img src={"https://i.ibb.co/hgJQGRt/back3.png"}   /></Link>
-            <Link to="/background/back1"><img src={'https://i.ibb.co/jTKRdzB/back1.png'}   /></Link>
+            <button onClick={setBackground} ><img src={"https://i.ibb.co/myvxs1Y/back2.png"} /></button>
+            <button onClick={setBackground}><img src={"https://i.ibb.co/hgJQGRt/back3.png"} /></button>
+            <button onClick={setBackground}><img src={'https://i.ibb.co/jTKRdzB/back1.png'} /></button>
             
             </div>}
             />

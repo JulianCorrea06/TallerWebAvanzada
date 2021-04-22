@@ -24,6 +24,18 @@ export const PreviewSelections: React.FC<PreviewSelectionsProps> =({}) =>{
     return(
             
             <div>
+
+
+            <Route path="/body" render={()=>
+            <div className="backgroundMenu">
+            <Link to="/clothes/hat/1"><img src={Hat} alt=""/></Link>
+            
+            
+
+            </div>}
+            />
+
+
                 <Route path="/clothes/hat" render={()=>
             <div className="backgroundMenu">
             <Link to="/clothes/hat/1"><img src={Hat} alt=""/></Link>

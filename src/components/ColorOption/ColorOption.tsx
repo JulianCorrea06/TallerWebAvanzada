@@ -9,14 +9,10 @@ export const ColorOption: React.FC<ColorOptionProps>=({colorValue}) =>{
 
 return(
 
-
-    <div></div>
-    /*
     <div>
     <button className="colorpickerbtn" id="Cbtn" ></button>
     </div>
 
-    */
 );
 
 }
