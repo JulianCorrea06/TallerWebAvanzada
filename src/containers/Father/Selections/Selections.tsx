@@ -5,16 +5,16 @@ import { BtnOptions } from '../../../components/BtnOptions/BtnOptions';
 import { ImageBtn } from '../../../components/BtnOptions/ImageBtn/ImageBtn';
 
 interface SelectionsProps{
-    //Parte 1 donde salen las opciones
-    //Parte 2 donde salen los elementos de personalización de color e imagen
+    setBackground?: any;
+    setPokemon?: any;
+    setClothes?:any;
 }
 
 const allSelectionsText ={
-    text1: "Skin Color",
-    text2: "Hat",
-    text3: "Shirt",
-    text4: "Pants"
-
+    
+    text2: "Set 1",
+    text3: "Set 2",
+    text4: "Set 3"
 }
 
 const allImgId={
@@ -29,7 +29,7 @@ const allPokeId={
     id3: "chikorita"
 }
 
-export const Selections: React.FC<SelectionsProps> =({}) =>{
+export const Selections: React.FC<SelectionsProps> =({setBackground, setPokemon, setClothes}) =>{
 
     const [selects, setSelects] = React.useState(allSelectionsText);
     const [imgIds, setImgIds] = React.useState(allImgId);
@@ -37,19 +37,14 @@ export const Selections: React.FC<SelectionsProps> =({}) =>{
     return(
 
         <div className='section'>
-            <Route path="/body" 
-            render={()=><BtnOptions
-            //Texto a coloar según la ruta en la que esté es ColorSkin
-            text = {selects.text1}
-                />}
-            />
+            
 
             <Route path="/clothes" 
             render={()=><BtnOptions
             //Texto a coloar según la ruta en la que esté es Hat, Shirt, Pants
             text = {selects.text2}
             text2 = {selects.text3}
-            text3 = {selects.text4}
+            text3 = {selects.text4} setClothes={setClothes}
             />}
             />
 
@@ -58,7 +53,7 @@ export const Selections: React.FC<SelectionsProps> =({}) =>{
             
             text ={imgIds.id}
             text2 ={imgIds.id2}
-            text3 ={imgIds.id3}
+            text3 ={imgIds.id3} setBackground={setBackground}
                         />
             }
             />
@@ -66,9 +61,9 @@ export const Selections: React.FC<SelectionsProps> =({}) =>{
             <Route path="/pokemon" 
             render={()=><BtnOptions
             
-            text ={imgIds.id}
-            text2 ={imgIds.id2}
-            text3 ={imgIds.id3}
+            text ={pokeIds.id}
+            text2 ={pokeIds.id2}
+            text3 ={pokeIds.id3} setPokemon={setPokemon}
                         />
             }
             />

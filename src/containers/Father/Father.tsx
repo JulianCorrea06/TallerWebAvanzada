@@ -4,6 +4,7 @@ import { Selections } from "../Father/Selections/Selections";
 import { Route } from 'react-router';
 import { PreviewOptions } from './PreviewOptions/PreviewOptions';
 import { PreviewSelections } from './PreviewSelections/PreviewSelection';
+import { createSemicolonClassElement } from 'typescript';
 
 interface FatherProps{
     //Parte 1 donde salnen las opciones
@@ -12,26 +13,25 @@ interface FatherProps{
 
 export const Father: React.FC<FatherProps> =({}) =>{
 
+    const [background, setBackground] = React.useState("");
+    const [pokemon, setPokemon] = React.useState("");
+    const [clothes, setClothes] = React.useState("");
+
+    console.log(background);
+    console.log(pokemon);
 
     return(
 
         <div className='subsection'>
 
-            <PreviewOptions/>
+            <PreviewOptions background={background} pokemon={pokemon} clothes={clothes}/>
             
-            <Route path="/body" render={()=>
-            <div className="prueba">
-                
-                <Selections/>
-                <PreviewSelections/>
-            </div>
-            }
-        />
+            
 
         <Route path="/clothes" render={()=>
             <div className="prueba">
                 
-            <Selections/>
+            <Selections setClothes={setClothes}/>
             <PreviewSelections/>
         </div>
         
@@ -39,11 +39,11 @@ export const Father: React.FC<FatherProps> =({}) =>{
         />
 
         <Route path="/background" render={()=>
-            <Selections/>}
+            <Selections setBackground={setBackground}/>}
         />
 
         <Route path="/pokemon" render={()=>
-            <Selections/>}
+            <Selections setPokemon={setPokemon}/>}
         />
         
         </div>

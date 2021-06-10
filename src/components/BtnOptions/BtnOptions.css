@@ -41,12 +41,14 @@
   }
 
   .pokeMenu{
-        
+        display: flex;
+          align-content: center;
+          justify-content: space-between;
 }
 
 
   .pokeMenu img{
-        width: 30%;
+        width: 100%;
 }
 
 .buttons{

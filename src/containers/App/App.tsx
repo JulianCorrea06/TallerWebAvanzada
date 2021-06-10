@@ -11,7 +11,7 @@ import ColorPicker from "react-pick-color";
 import { previewContext } from "../../utils/previewContext";
 
 const initialNavs ={
-    item1: "Body",
+    
     item2: "Clothes",
     item3: "Background",
     item4: "Pokemon",
@@ -40,7 +40,7 @@ export const App = () => {
   ) => {
     
     const newNav = {
-      item1: item,
+      
       item2: item,
       item3: item,
       item4: item,
@@ -64,15 +64,13 @@ export const App = () => {
       <body>
         <Navigation
           //Navegación para escoger editor
-          item1={navs.item1}
+          
           item2={navs.item2}
           item3={navs.item3}
           item4={navs.item4}
         />
 
-        <Route path="/body" render={()=>
-            <Father/>}
-        />
+        
         <Route path="/clothes" render={()=>
             <Father/>}
         />
@@ -90,8 +88,6 @@ export const App = () => {
 
     </previewContext.Provider>     
 
-    //arribita en el body colocar
-    //<ColorPicker color={color} hideAlpha={true} onChange={(color) => setColor(color.hex) } />
   );
 };
 

@@ -9,15 +9,41 @@
 }
 
 .skinstyle{
-    height: 500px;
+    z-index: 1;
+    max-height: 500px;
+    width: 236px;
+    
+}
+
+.clothestyle{
+    z-index: 2;
+    position: relative;
+    margin-top: 26px;
+    left: 182px;
+    
+    max-height: 380px;
+    
 }
 
 .previewSection h1 {
     text-align: center;
     font-weight: 700;
     font-size: 30px;
-    color: white;
+    color: #FF7979;
     margin: 20px;
-
-
   }
+
+.pokestyle{
+    z-index: 0;
+    max-height: 200px;
+    position: relative;
+    top: 200px;
+    left: -100px;
+    
+}
+
+.characters{
+    display: flex;
+    flex-direction: row;
+    margin-right: -100px;
+}
